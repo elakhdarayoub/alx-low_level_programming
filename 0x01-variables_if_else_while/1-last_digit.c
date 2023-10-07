@@ -16,7 +16,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n >= 100)
 	{
-		last = n % 100;
+		last = n % 10;
 		last = last % 10;
 	}
 	else
