@@ -17,7 +17,7 @@ int main(void)
 	if (n >= 100)
 	{
 		last = n % 100;
-		last %= 10;
+		last = last % 10;
 	}
 	else
 	{
