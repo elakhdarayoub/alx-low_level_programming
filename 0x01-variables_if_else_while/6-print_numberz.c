@@ -11,7 +11,7 @@ int main(void)
 	unsigned short int i;
 
 	for (i = 0; i < 10; i++)
-		printf("%i", i);
-	putchar(10);
+		putchar(48 + i);
+	putchar('\n');
 	return (0);
 }
