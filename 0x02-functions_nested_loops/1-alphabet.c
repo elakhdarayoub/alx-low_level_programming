@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet: it does what exactly says.
+ * print_alphabet - it does what exactly says.
  *
  * Description: it prints a list of english alphabets.
  * Retrun: void.
