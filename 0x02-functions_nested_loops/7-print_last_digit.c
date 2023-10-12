@@ -17,7 +17,7 @@ int print_last_digit(int n)
 		short int new;
 
 		new = lastDigit * (-1);
-		putchar('0' + new);
+		_putchar('0' + new);
 	}
 	else
 	{
