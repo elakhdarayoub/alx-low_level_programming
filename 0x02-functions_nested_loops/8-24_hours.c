@@ -9,11 +9,11 @@
 void jack_bauer(void)
 {
 	short int H, h, M, m, s;
-	
+
 	H = h = M = m = s = 0;
 	while (H <= 2)
 	{
-		while (h <= 3)
+		while (h <= 9)
 		{
 			while (M <= 5)
 			{
@@ -21,16 +21,21 @@ void jack_bauer(void)
 				{
 					while (s <= 60)
 						s++;
-					
-					_putchar(48 + H);
-					_putchar(48 + h);
-					_putchar(':');
-					_putchar(48 + M);
-					_putchar(48 + m);
-					_putchar('\n');
-
-					m++;
-					s = 0;
+					if ((H + h + M + m) <= 21)
+					{
+						_putchar(48 + H);
+						_putchar(48 + h);
+						_putchar(':');
+						_putchar(48 + M);
+						_putchar(48 + m);
+						_putchar('\n');
+						m++;
+						s = 0;
+					}
+					else
+					{
+						break;
+					}
 				}
 				m = 0;
 				M++;
