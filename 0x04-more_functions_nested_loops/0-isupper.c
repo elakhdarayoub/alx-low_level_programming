@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupperr - checks char case type.
+ * _isupper - checks char case type.
  * @c: The character to check.
  *
  * Description: the func checks if a character is upper case.
