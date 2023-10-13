@@ -8,16 +8,23 @@
  */
 void more_numbers(void)
 {
-	short int i, j;
+	short int i, j, n;
 
+	/* number of lines */
 	for (i = 0; i < 10; i++)
 	{
+		/* printing the digits */
 		for (j = 0; j < 15; j++)
 		{
-			if (j > 9)
-				_putchar('1' + (j % 10));
 			_putchar('0' + j);
+			while (j > 9)
+			{
+				n = j % 10;
+
+			}
 		}
+
+		/* printing a new line after each row */
 		_putchar('\n');
 	}
 }
