@@ -11,18 +11,24 @@ void print_diagonal(int n)
 {
 	short int i, j;
 
-	/* for loop for '\' */
-	for (i = 0; i < n; i++)
+	if (n <= 0)
 	{
-		if (n <= 0)
-			break;
-
-		/*prints ' ' before '\'*/
-		for (j = 0; j < n - 1; j++)
-			_putchar(' ');
-
-		/* prints '\' */
-		_putchar('\\');
 		_putchar('\n');
+	} else
+	{
+		for (i = 0; i < n; i++)
+		{
+			if (n != 1)
+			{
+				for (j = 0; j < i; j++)
+				{
+					_putchar(' ');
+				}
+			}
+			_putchar('\\');
+
+			/*printing new line only when we not on last line*/
+			_putchar('\n');
+		}
 	}
 }
