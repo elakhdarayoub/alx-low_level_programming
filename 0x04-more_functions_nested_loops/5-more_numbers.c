@@ -16,12 +16,13 @@ void more_numbers(void)
 		/* printing the digits */
 		for (j = 0; j < 15; j++)
 		{
-			_putchar('0' + j);
-			while (j > 9)
+			n = j;
+			if (j > 9)
 			{
+				_putchar(1 + 48);
 				n = j % 10;
-
 			}
+			_putchar(n + 48);
 		}
 
 		/* printing a new line after each row */
