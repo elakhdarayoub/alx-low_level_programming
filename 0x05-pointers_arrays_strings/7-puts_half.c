@@ -9,22 +9,20 @@
  */
 void puts_half(char *str)
 {
-	short int len, stringHalf, startPoint, i;
+	short int len, stringHalf, i;
 
 	len = 0;
 	/* Calculating the length of string */
 	while (str[len] != '\0')
 		len++;
-
+	len--;
 	if (len % 2 == 0)
-		stringHalf = len / 2;
+		stringHalf = (len - 1) / 2;
 	else
 		stringHalf = len / 2 + 1;
 
-	startPoint = len - stringHalf;
-
 	/* Printing the second half */
-	for (i = startPoint; i <= len; i++)
+	for (i = stringHalf; i <= len; i++)
 		_putchar(str[i]);
 	_putchar('\n');
 }
