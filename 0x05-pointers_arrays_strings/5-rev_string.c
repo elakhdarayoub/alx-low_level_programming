@@ -8,18 +8,16 @@
  */
 void rev_string(char *s)
 {
-	short int len, i, j;
+	int l, i;
+	char temp;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	j = len;
-	for (i = 0; i < j; i++)
+	for (l = 0; s[l] != '\0'; ++l)
+		;
+
+	for (i = 0; i < l / 2; i++)
 	{
-		// Read the last resources maybe you'll find something new.
-	       	// Try to use swap idea and revise pre and post increamenting.
-		s[i] = s[--len];
-		len--;
+		temp = s[i];
+		s[i] = s[l - 1 - i];
+		s[l - 1 - i] = temp;
 	}
-	s[j] = '\0';
 }
