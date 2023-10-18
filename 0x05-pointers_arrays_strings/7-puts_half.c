@@ -18,6 +18,9 @@ void puts_half(char *str)
 	final_len = (len - 1) / 2;
 	startPoint = (len - 1) - final_len;
 
+	if (final_len % 2 != 0)
+		startPoint++;
+
 	/* Printing the second half */
 	for (i = startPoint; i <= len - 1; i++)
 		_putchar(str[i]);
