@@ -15,14 +15,14 @@ void puts_half(char *str)
 	/* Calculating the length of string */
 	while (str[len] != '\0')
 		len++;
-	final_len = (len - 1) / 2;
-	startPoint = (len - 1) - final_len;
+	final_len = --len / 2;
+	startPoint = len - final_len;
 
 	if (final_len % 2 != 0)
 		startPoint++;
 
 	/* Printing the second half */
-	for (i = startPoint; i <= len - 1; i++)
+	for (i = startPoint; i <= len; i++)
 		_putchar(str[i]);
 	_putchar('\n');
 }
