@@ -9,19 +9,12 @@
  */
 void puts_half(char *str)
 {
-	short int len, stringHalf, i;
+	short int i;
 
-	len = 0;
-	/* Calculating the length of string */
-	while (str[len] != '\0')
-		len++;
-	if (len % 2 == 0)
-		stringHalf = (len - 1) / 2;
-	else
-		stringHalf = len / 2;
-
-	/* Printing the second half */
-	for (i = stringHalf; i <= len; i++)
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	i++;
+	for (i /= 2; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	_putchar('\n');
 }
