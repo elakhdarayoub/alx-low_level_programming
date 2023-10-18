@@ -16,6 +16,9 @@ void puts2(char *str)
 	while (str[i] != '\0')
 		i++;
 
+	/* Removing the \0 extra one from i*/
+	i--;
+
 	/* Printing the chars */
 	while (j <= i)
 	{
