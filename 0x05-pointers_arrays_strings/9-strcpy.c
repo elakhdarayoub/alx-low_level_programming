@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strcpy - Copies a string to another array.
+ * *_strcpy - Copies a string to another array.
  * @dest: The distination buffer.
  * @src: The source string.
  *
