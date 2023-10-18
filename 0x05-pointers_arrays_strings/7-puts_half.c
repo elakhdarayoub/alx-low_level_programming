@@ -16,9 +16,7 @@ void puts_half(char *str)
 	while (str[len] != '\0')
 		len++;
 	stringHalf = --len / 2;
-	startPoint = len - stringHalf;
-	if (len % 2 != 0)
-		startPoint++;
+	startPoint = len - stringHalf + 1;
 
 	/* Printing the second half */
 	for (i = startPoint; i <= len; i++)
