@@ -15,11 +15,10 @@ void puts_half(char *str)
 	/* Calculating the length of string */
 	while (str[len] != '\0')
 		len++;
-	len--;
 	if (len % 2 == 0)
 		stringHalf = (len - 1) / 2;
 	else
-		stringHalf = len / 2 + 1;
+		stringHalf = len / 2;
 
 	/* Printing the second half */
 	for (i = stringHalf; i <= len; i++)
