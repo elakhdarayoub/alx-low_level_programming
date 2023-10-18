@@ -9,17 +9,14 @@
  */
 void puts_half(char *str)
 {
-	short int len, final_len, startPoint, i;
+	short int len, stringHalf, startPoint, i;
 
 	len = 0;
 	/* Calculating the length of string */
 	while (str[len] != '\0')
 		len++;
-	final_len = --len / 2;
-	startPoint = len - final_len;
-
-	if (final_len % 2 != 0)
-		startPoint++;
+	stringHalf = --len / 2;
+	startPoint = len - stringHalf + 1;
 
 	/* Printing the second half */
 	for (i = startPoint; i <= len; i++)
