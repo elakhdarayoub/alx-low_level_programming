@@ -10,11 +10,13 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int nullCharLocation, srcLen;
+	int nullCharLocation, srcLen, i;
 
-	nullCharLocation = srcLen = 0;
+	nullCharLocation = 0;
+	srcLen = 0;
+
 	/* Finding The null byte location in dest */
-	while (dest[nullCharLocation] != '\n')
+	while (dest[nullCharLocation] != '\0')
 		nullCharLocation++;
 
 	/* Calculating the length of src */
@@ -22,10 +24,10 @@ char *_strcat(char *dest, char *src)
 		srcLen++;
 
 	/* Concatinating process*/
-	int i;
-
 	for (i = 0; i <= srcLen; i++)
 	{
 		dest[nullCharLocation + i] = src[i];
 	}
+
+	return (dest);
 }
