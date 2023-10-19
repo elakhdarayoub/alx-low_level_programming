@@ -12,8 +12,7 @@ char *_strcat(char *dest, char *src)
 {
 	int nullCharLocation, srcLen, i;
 
-	nullCharLocation = 0;
-	srcLen = 0;
+	nullCharLocation = srcLen = 0;
 
 	/* Finding The null byte location in dest */
 	while (dest[nullCharLocation] != '\0')
@@ -25,9 +24,7 @@ char *_strcat(char *dest, char *src)
 
 	/* Concatinating process*/
 	for (i = 0; i <= srcLen; i++)
-	{
 		dest[nullCharLocation + i] = src[i];
-	}
 
 	return (dest);
 }
