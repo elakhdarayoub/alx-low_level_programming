@@ -28,12 +28,12 @@ int isDelimiter(char c)
 
 /**
  * *cap_string - Capitalize a string.
- * @str: The string to process.
+ * @s: The string to process.
  *
  * Description: Capitalizes all words inside string.
  * Return: string.
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
 	char *ptr = s;
 	int foundDelimit = 1;
