@@ -28,3 +28,4 @@ int actual_prime(int n, int i)
 		return (1);
 	if (n % i == 0 && i > 0)
 		return (0);
+}
