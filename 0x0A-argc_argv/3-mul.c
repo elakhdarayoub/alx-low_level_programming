@@ -10,19 +10,11 @@
  */
 int main(int argc, char **argv)
 {
-	int result, a, b;
-
 	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		a = argv[1];
-		b = argv[2];
-		result = a * b;
-	}
-	printf("%d\n", result);
+	printf("%d\n", argv[1] * argv[2]);
 	return (0);
 }
