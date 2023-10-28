@@ -12,24 +12,16 @@
  */
 int main(int argc, char **argv)
 {
-	int result, i;
+	int result = 0;
+	char *c;
 
-	result = 0;
-	if (argc == 1)
-		printf("%d\n", 0);
-	else
+	while (--argc)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			if (atoi(argv[i]) && atoi(argv[i]) > 0)
-				result += atoi(argv[i]);
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		printf("%d\n", result);
+		for (c = argv[argc]; *c; c++)
+			if (*c < '0' || *c > '9')
+				return(printf("Error\n"), 1);
+		result += atoi(argv[argc]);
 	}
+	printf("%d\n", result);
 	return (0);
 }
