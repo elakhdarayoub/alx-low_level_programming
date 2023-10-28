@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	else
-		result = argv[1] * agrv[argc - 1]; 
-	return (result);
+		result = argv[1] * agrv[argc - 1];
+	printf("%d", result);
+	return (0);
 }
