@@ -11,9 +11,15 @@
 int main(int argc, char **argv)
 {
 	int i;
-	(void)argv;
 
-	for (i = 0; i < argc; i++)
+	(void)argv;
+	if (argc > 1)
+	{
+		for (i = 0; i < argc - 1; i++)
+			;
 		printf("%d\n", i);
+	}
+	else
+		printf("%d\n", argc - 1);
 	return (0);
 }
