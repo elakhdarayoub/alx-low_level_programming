@@ -10,16 +10,19 @@
  */
 int main(int argc, char **argv)
 {
-	int result;
+	int result, a, b;
 
-	result = 0;
-	if (argc < 2)
+	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	else
-		result = argv[1] * agrv[argc - 1];
-	printf("%d", result);
+	{
+		a = argv[1];
+		b = argv[2];
+		result = a * b;
+	}
+	printf("%d\n", result);
 	return (0);
 }
