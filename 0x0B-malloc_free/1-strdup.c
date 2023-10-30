@@ -3,7 +3,7 @@
 
 /**
  * _strdup - Dublicates a string in a newly allocated space.
- * str: The string to dublicate.
+ * @str: The string to dublicate.
  *
  * Description: Dublicates a string in a dynamically allocated space.
  * Return: Base address of a char array.
@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	 * Allocating size of bytes for arr and
 	 * make sure the wanted space is available
 	 */
-	for (j = 0; j < size; j++)
+	for (j = 0; j <= size; j++)
 	{
 		arr = malloc(sizeof(*arr));
 		if (arr == NULL)
