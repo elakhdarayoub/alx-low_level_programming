@@ -10,11 +10,14 @@
  */
 char *_strdup(char *str)
 {
-	char *arr;
+	char *arr, *copy;
 	int size, k;
 
 	if (str == NULL)
 		return (NULL);
+
+	/* copying the base address to copy pointer to manupilate the array */
+	copy = str;
 
 	/* Calculating the size of str */
 	for (size = 0; str[size] != '\0'; size++)
@@ -24,9 +27,12 @@ char *_strdup(char *str)
 	 * Allocating size of bytes for arr and
 	 * make sure the wanted space is available
 	 */
-	arr = malloc(sizeof(str));
-	if (arr == NULL)
-		return (NULL);
+	while (*copy++ >= '\0')
+	{
+		arr = malloc(sizeof(str));
+		if (arr == NULL)
+			return (NULL);
+	}
 
 	/* Dublicating the str to arr */
 	for (k = 0; k < size; k++)
