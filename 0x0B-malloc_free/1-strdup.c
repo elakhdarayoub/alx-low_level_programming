@@ -10,24 +10,25 @@
  */
 char *_strdup(char *str)
 {
-	int size, k;
+	int size = 0, i = 0;
 	char *arr;
 
 	/* Checks if the str is NULL */
 	if (str == NULL)
 		return (NULL);
+	for (; str[size] != '\0'; size++)
+	;
 
-	/* Calculating the size of str and allocating the same space for arr */
-	size = -1;
-	do {
-		arr = malloc(sizeof(char));
-		if (arr == NULL)
-			return (NULL);
-		size++;
-	} while (str[size] != '\0');
+	m = malloc(size * sizeof(*str) + 1);
 
-	/* Dublicating the str to arr */
-	for (k = 0; k < size; k++)
-		arr[k] = str[k];
-	return (arr);
+	if (m == 0)
+	{
+		return (NULL);
+	}
+	else
+	{
+		for (; i < size; i++)
+			arr[i] = str[i];
+	}
+	return (m);
 }
