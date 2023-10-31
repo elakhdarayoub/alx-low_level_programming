@@ -29,7 +29,7 @@ char *_strdup(char *str)
 	 */
 	while (*copy++ >= '\0')
 	{
-		arr = malloc(sizeof(str));
+		arr = malloc(sizeof(char));
 		if (arr == NULL)
 			return (NULL);
 	}
