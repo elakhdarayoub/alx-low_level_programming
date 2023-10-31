@@ -11,7 +11,7 @@
 char *_strdup(char *str)
 {
 	char *arr;
-	int size, j, k;
+	int size, k;
 
 	if (str == NULL)
 		return (NULL);
@@ -24,12 +24,9 @@ char *_strdup(char *str)
 	 * Allocating size of bytes for arr and
 	 * make sure the wanted space is available
 	 */
-	for (j = 0; j <= size; j++)
-	{
-		arr = malloc(sizeof(*arr));
-		if (arr == NULL)
-			return (NULL);
-	}
+	arr = malloc(sizeof(str));
+	if (arr == NULL)
+		return (NULL);
 
 	/* Dublicating the str to arr */
 	for (k = 0; k < size; k++)
