@@ -9,7 +9,7 @@
  *
  * Description: Creates a Dog instances.
  */
-struct Dog
+struct dog
 {
 	char *name;
 	float age;
