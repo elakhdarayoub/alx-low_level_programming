@@ -49,7 +49,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* Insert the node */
 	previous = get_nodeint_at_index(*head, idx - 1);
 	current = get_nodeint_at_index(*head, idx);
-	previous->next = newNode;
-	newNode->next = current;
+	if (previous && current)
+	{
+		newNode->next = current;
+		previous->next = newNode;
+	}
+	else
+		return (NULL);
 	return (newNode);
 }
