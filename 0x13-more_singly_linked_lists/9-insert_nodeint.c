@@ -52,14 +52,21 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = newNode;
 		return (*head);
 	}
-	previous = get_nodeint_at_index(*head, idx - 1);
-	current = get_nodeint_at_index(*head, idx);
-	if (previous && current)
+	else if (idx == 0)
 	{
-		newNode->next = current;
-		previous->next = newNode;
+		(*head)->next = newNode;
+		return ((*head)->next);
 	}
 	else
-		return (NULL);
+	{
+		previous = get_nodeint_at_index(*head, idx - 1);
+		if (previous)
+		{
+			newNode->next = previous->next;
+			previous->next = newNode;
+		}
+		else
+			return (NULL);
+	}
 	return (newNode);
 }
