@@ -34,7 +34,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *newNode, *current, *previous;
+	listint_t *newNode, *previous;
 
 	/* Creates and initialize a new node */
 	newNode = malloc(sizeof(listint_t));
