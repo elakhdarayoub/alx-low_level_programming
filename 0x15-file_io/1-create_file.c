@@ -3,6 +3,23 @@
 #include "main.h"
 
 /**
+ * _strlen - Calculates length of a string.
+ * @s: The string.
+ * Return: length.
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	if (!s)
+		return (0);
+
+	while (*s++)
+		i++;
+	return (i);
+}
+
+/**
  * create_file - Creates a file
  * @filename: Name of the file.
  * @text_content: text to write.
